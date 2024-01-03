@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
     },
     innerTitle:{
         color: Colors.orange,
-        textDecorationColor: 'underline'
+        textDecorationLine: 'underline'
     },
     signin:{
         fontSize: 16,
