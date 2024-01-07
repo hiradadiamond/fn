@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 8,
         backgroundColor: Colors.indigo,
         borderRadius: 8,
-        width: '100%'
+        flex: 1
     },
     title:{ 
         fontSize: 16,

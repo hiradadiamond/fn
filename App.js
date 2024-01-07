@@ -15,6 +15,7 @@ import Task from './src/screens/app/Task';
 import Client from './src/screens/app/Client';
 import Profile from './src/screens/app/Profile';
 import { Image } from 'react-native';
+import ProductDetails from './src/components/ProductDetails';
 
 
 const Stack = createNativeStackNavigator();
@@ -86,6 +87,7 @@ const App = () => {
         (
             <>
             <Stack.Screen name="Splash" component={Tabs} options={{headerShown: false}}/>
+            <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
             </>
         ) : 
         (
