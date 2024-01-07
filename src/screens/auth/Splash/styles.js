@@ -30,5 +30,9 @@ export const styles = StyleSheet.create({
         color: Colors.indigo,
         textAlign: 'center',
         marginTop: 30,
+    },
+    buttonContainer:{
+        flexDirection: 'row', 
+        width: '100%'
     }
 })

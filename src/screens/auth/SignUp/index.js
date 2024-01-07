@@ -3,7 +3,7 @@ import {Text, View, Image, Pressable} from 'react-native';
 import {styles} from './styles';
 import Button from '../../../components/common/Button';
 import AuthHeader from '../../../components/AuthHeader';
-import Input from '../../../components/input';
+import Input from '../../../components/Input';
 import CheckBox from '../../../components/CheckBox';
 import Seperator from '../../../components/common/Seperator';
 import GoogleLogin from '../../../components/GooglrLogin';
