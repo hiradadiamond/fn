@@ -5,16 +5,18 @@ import TaskItem from "../../../components/TaskItem";
 import { products } from "../../../data/products";
 import Header from "../../../components/Header";
 
-const Task = ({navigation}) => {
+const MyTaskList = ({navigation}) => {
     const renderItem = ({item}) => {
         const onTaskPress = () => {
             navigation.navigate('ProductDetails', { product: item });
         }
-        return (<TaskItem icon={require("../../../assets/delete.png")}onPress={()=> onTaskPress(item)}{...item}/>);
+        return (<TaskItem icon={require('../../../assets/delete.png')} onPress={()=> onTaskPress(item)}{...item}/>);
     }
+
+    const goBack = () => navigation.goBack();
     return (
         <SafeAreaView>
-            <Header title="Task Feed"/>
+            <Header title="MyTask Listing" showBack onBackPress={goBack}/>
                 <FlatList 
                  data = { products}
                  renderItem={renderItem}
@@ -24,4 +26,4 @@ const Task = ({navigation}) => {
     )
 }
 
-export default Task;
+export default MyTaskList;

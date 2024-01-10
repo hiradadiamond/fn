@@ -5,7 +5,7 @@ import Button from '../../../components/common/Button';
 import AuthHeader from '../../../components/AuthHeader';
 import Input from '../../../components/Input';
 import Seperator from '../../../components/common/Seperator';
-import GoogleLogin from '../../../components/GooglrLogin';
+import GoogleLogin from '../../../components/GoogleLogin';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
