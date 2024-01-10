@@ -15,11 +15,24 @@ import Task from './src/screens/app/Task';
 import Client from './src/screens/app/Client';
 import Profile from './src/screens/app/Profile';
 import { Image } from 'react-native';
+import Settings from './src/screens/app/Settings';
 import ProductDetails from './src/components/ProductDetails';
+import CreateListing from './src/screens/app/CreateListing';
+import MyTaskList from './src/screens/app/MyTaskList';
 
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const ProfileStack = () => {
+  return (  
+  <Stack.Navigator>
+    <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
+    <Stack.Screen name="Settings" component={Settings} options={{headerShown: false}}/> 
+    <Stack.Screen name="CreateListing" component={CreateListing} options={{headerShown: false}}/>   
+    <Stack.Screen name="MyTaskList" component={MyTaskList} options={{headerShown: false}}/>   
+</Stack.Navigator>)
+}
 
 const Tabs = () => (
   <Tab.Navigator 
@@ -31,7 +44,7 @@ const Tabs = () => (
         iconName = focused
           ? require('./src/assets/tabs/home_active.png')
           : require('./src/assets/tabs/home.png');
-      } else if (route.name === 'Profile') {
+      } else if (route.name === 'ProfileStack') {
         iconName = focused 
         ? require('./src/assets/tabs/profile_active.png') 
         : require('./src/assets/tabs/profile.png');
@@ -58,7 +71,7 @@ const Tabs = () => (
   <Tab.Screen name="Home" component={Home} />
   <Tab.Screen name="Task" component={Task} />
   <Tab.Screen name="Clients" component={Client} />
-  <Tab.Screen name="Profile" component={Profile} />
+  <Tab.Screen name="ProfileStack" component={ProfileStack} />
 </Tab.Navigator>
 )
 

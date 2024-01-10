@@ -2,7 +2,7 @@ import React from "react"
 import { View, Text, Image, Pressable } from 'react-native';
 import {styles} from './styles';
  
-const TaskItem = ({ title, image, price, date, time, onPress}) => {
+const TaskItem = ({ title, icon,  image, price, date, time, onPress}) => {
    return (
     <Pressable onPress={onPress} style={styles.container}>
         <Image style={styles.image} source={{uri: image}}/>
@@ -12,7 +12,7 @@ const TaskItem = ({ title, image, price, date, time, onPress}) => {
             <Text style={styles.date}>{date}</Text>
             <Text style={styles.time}>{time}</Text>
         </View>
-        <Image style={styles.icon} source={require('../../assets/close.png')}/>
+        <Image style={styles.icon} source={icon || require('../../assets/close.png')}/>
     </Pressable>
    )
 }
